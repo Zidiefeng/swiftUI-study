@@ -10,9 +10,12 @@ import SwiftUI
 struct RecipeListView: View {
     
     // Reference to the view model
-    @ObservedObject var model = RecipeModel()
+    // comment this, use environment object method instead
+    // @ObservedObject var model = RecipeModel()
     
     
+    // use the environment object passed from the parent viewe
+    @EnvironmentObject var model: RecipeModel
     var body: some View {
         NavigationView {
             List(model.recipes){r in
