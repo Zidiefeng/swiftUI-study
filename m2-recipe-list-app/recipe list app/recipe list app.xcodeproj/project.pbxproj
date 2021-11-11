@@ -20,6 +20,8 @@
 		789BF00E272E2A2100F96B5F /* TestTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789BF00D272E2A2100F96B5F /* TestTabView.swift */; };
 		789BF010272E2E2700F96B5F /* RecipeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789BF00F272E2E2700F96B5F /* RecipeTabView.swift */; };
 		789BF012272E316100F96B5F /* TestGeometryReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789BF011272E316100F96B5F /* TestGeometryReader.swift */; };
+		78A14168273B150D0040038B /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A14167273B150D0040038B /* SwiftUIView.swift */; };
+		78E62AD9273DC09500C853C8 /* Rational.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E62AD8273DC09500C853C8 /* Rational.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		789BF00D272E2A2100F96B5F /* TestTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTabView.swift; sourceTree = "<group>"; };
 		789BF00F272E2E2700F96B5F /* RecipeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTabView.swift; sourceTree = "<group>"; };
 		789BF011272E316100F96B5F /* TestGeometryReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGeometryReader.swift; sourceTree = "<group>"; };
+		78A14167273B150D0040038B /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		78E62AD8273DC09500C853C8 /* Rational.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rational.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,7 @@
 		785A46162724D54600E9039C /* recipe list app */ = {
 			isa = PBXGroup;
 			children = (
+				78E62AD7273DC07D00C853C8 /* Utilities */,
 				785A46172724D54600E9039C /* recipe_list_app.swift */,
 				785A46262724D5AD00E9039C /* Views */,
 				785A46282724D5C000E9039C /* ViewModels */,
@@ -102,10 +107,9 @@
 			children = (
 				785A46192724D54600E9039C /* RecipeListView.swift */,
 				78441E8E27260053006C8795 /* RecipeDetailView.swift */,
-				789BF00D272E2A2100F96B5F /* TestTabView.swift */,
 				789BF00F272E2E2700F96B5F /* RecipeTabView.swift */,
-				789BF011272E316100F96B5F /* TestGeometryReader.swift */,
 				785A91752739A60000A934F6 /* RecipeFeaturedView.swift */,
+				78A14166273B14F90040038B /* Demo */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -132,6 +136,24 @@
 				785A462A2724D80700E9039C /* recipes.json */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		78A14166273B14F90040038B /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				789BF00D272E2A2100F96B5F /* TestTabView.swift */,
+				789BF011272E316100F96B5F /* TestGeometryReader.swift */,
+				78A14167273B150D0040038B /* SwiftUIView.swift */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		78E62AD7273DC07D00C853C8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				78E62AD8273DC09500C853C8 /* Rational.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +229,7 @@
 			files = (
 				789BF010272E2E2700F96B5F /* RecipeTabView.swift in Sources */,
 				789BF00E272E2A2100F96B5F /* TestTabView.swift in Sources */,
+				78A14168273B150D0040038B /* SwiftUIView.swift in Sources */,
 				785A462D2724D85600E9039C /* Recipe.swift in Sources */,
 				789BF012272E316100F96B5F /* TestGeometryReader.swift in Sources */,
 				78441E8F27260053006C8795 /* RecipeDetailView.swift in Sources */,
@@ -215,6 +238,7 @@
 				785A461A2724D54600E9039C /* RecipeListView.swift in Sources */,
 				785A46182724D54600E9039C /* recipe_list_app.swift in Sources */,
 				785A46312724E4E400E9039C /* DataService.swift in Sources */,
+				78E62AD9273DC09500C853C8 /* Rational.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

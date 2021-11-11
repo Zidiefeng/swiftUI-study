@@ -10,6 +10,11 @@ import SwiftUI
 struct RecipeDetailView: View {
     // since this is unset, it's need to be passed when create this view
     var recipe: Recipe
+    
+    // Picker
+    @State var selectedServingSize = 2
+    
+    
     var body: some View {
         ScrollView{
             VStack(alignment: .leading){
@@ -20,6 +25,22 @@ struct RecipeDetailView: View {
                     .scaledToFill()
                     .clipped()
                 
+                // MARK: Serving Size Picker
+                VStack(alignment: .leading){
+                    Text("Select Your Serving Size:")
+                    Picker("", selection: $selectedServingSize){
+                        Text("2").tag(2)
+                        Text("4").tag(4)
+                        Text("6").tag(6)
+                        Text("8").tag(8)
+                    }
+                    .pickerStyle(SegmentedPickerStyle())
+                    .frame(width: 160)
+                }
+                .padding()
+                
+                
+                
                 // MARK: Integredients
                 VStack(alignment: .leading){
                     Text("Ingredients")
@@ -27,7 +48,11 @@ struct RecipeDetailView: View {
                         .padding(.vertical,5)
                     //for identifiable object, ingredient, no id is needed! /*id: \.self*/
                     ForEach(recipe.ingredients){item in
-                        Text("• "+item.name)
+                        // no need to be binding here in selectedServingSize
+                        Text("• " +
+                             RecipeModel.getPortion(ingredient: item, recipeServings: recipe.servings, targetServings: selectedServingSize) +
+                             " " +
+                             item.name.lowercased())
                             .padding(.bottom, 1)
                     }
                 }

@@ -40,7 +40,6 @@ class DataService{
                     }
                 }
                 return recipeData
-                
             } catch{
                 // error with parsing data
                 print(error)
