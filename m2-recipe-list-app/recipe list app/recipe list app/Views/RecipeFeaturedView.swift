@@ -18,6 +18,11 @@ struct RecipeFeaturedView: View {
     @EnvironmentObject var model: RecipeModel
     
     @State var isDetailViewShowing = false
+    
+    @State var tabSelectionIndex = 0
+    
+
+    
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0){
@@ -27,7 +32,7 @@ struct RecipeFeaturedView: View {
                 .padding(.top,40)
                 .font(.largeTitle)
             GeometryReader{ geo in
-                TabView {
+                TabView(selection: $tabSelectionIndex) {
                     
                     //loop through each recipe
                     ForEach(0..<model.recipes.count){ index in
@@ -54,6 +59,7 @@ struct RecipeFeaturedView: View {
                                     }
                                 }
                             }
+                            .tag(index)
                             .sheet(isPresented: $isDetailViewShowing){
                                 // show the Recipe Detail View
                                 RecipeDetailView(recipe: model.recipes[index])
@@ -78,16 +84,31 @@ struct RecipeFeaturedView: View {
             VStack(alignment: .leading, spacing: 10){
                 Text(" Preparation Time:")
                     .font(.headline)
-                Text("1 hour")
+                Text(model.recipes[tabSelectionIndex].prepTime)
                 
                 Text("Highlights")
                     .font(.headline)
-                Text("Healthy, Hearty")
+                RecipeHighlights(highlights: model.recipes[tabSelectionIndex].highlights)
             }
             .padding([.leading,.bottom])
         }
+        // when the vstack is shown, the following code is performed
+        .onAppear {
+            setFeaturedIndex()
+        }
         
 
+    }
+    
+    
+    func setFeaturedIndex(){
+        // Find the index of the first recipe that is featured
+        var index = model.recipes.firstIndex { recipe in
+            print(recipe.featured)
+            print(recipe.name)
+            return recipe.featured
+        }
+        tabSelectionIndex = index ?? 0
     }
 }
 
