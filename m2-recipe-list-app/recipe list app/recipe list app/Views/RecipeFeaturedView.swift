@@ -31,6 +31,9 @@ struct RecipeFeaturedView: View {
                 .padding(.leading)
                 .padding(.top,40)
                 .font(.largeTitle)
+                //.font(Font.custom("Baskerville SemiBold", size: 40))
+            
+            
             GeometryReader{ geo in
                 TabView(selection: $tabSelectionIndex) {
                     
