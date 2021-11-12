@@ -61,7 +61,6 @@ struct RecipeListView: View {
             //.navigationBarTitle("Recipes")
         }
         
-  
 //        ScrollView{
 //            VStack(alignment: .leading){
 //                ForEach(model.recipes){ r in
