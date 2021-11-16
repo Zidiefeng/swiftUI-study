@@ -13,11 +13,11 @@ struct HomePage: View {
     
     var body: some View {
         NavigationView {
-            VStack(alignment: .leading) {
-                // MARK: Home Page Title
-                Text("My Library")
-                    .font(.largeTitle)
-                    .padding()
+//            VStack(alignment: .leading) {
+//                // MARK: Home Page Title
+//                Text("My Library")
+//                    .font(.largeTitle)
+//                    .padding()
                 
                 // MARK: Scrollable Book Card
                 ScrollView(.vertical) {
@@ -27,12 +27,26 @@ struct HomePage: View {
                                 Rectangle()
                                     .foregroundColor(.white)
                                 VStack(alignment: .leading, content: {
-                                    Text(b.title)
-                                        .font(.headline)
-                                        .foregroundColor(.black)
-                                    Text(b.author)
-                                        .font(.subheadline)
-                                        .foregroundColor(.black)
+                                    HStack {
+                                        VStack(alignment: .leading) {
+                                            Text(b.title)
+                                                .font(.headline)
+                                                .foregroundColor(.black)
+                                            Text(b.author)
+                                                .font(.subheadline)
+                                                .foregroundColor(.black)
+                                        }
+                                        Spacer()
+                                        if b.isFavourite {
+                                            Image(systemName: "star.fill")
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(width: 30   , height: 30)
+                                                .padding()
+                                                .foregroundColor(.yellow)
+                                        }
+                                    }
+                                    
                                     Image("cover"+String(b.id))
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
@@ -48,7 +62,9 @@ struct HomePage: View {
                         
                     }
                 }
-            }
+                .navigationTitle("Library")
+                
+            //}
         }
     }
 }

@@ -107,9 +107,9 @@
 		785A46262724D5AD00E9039C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				789BF00F272E2E2700F96B5F /* RecipeTabView.swift */,
 				785A46192724D54600E9039C /* RecipeListView.swift */,
 				78441E8E27260053006C8795 /* RecipeDetailView.swift */,
-				789BF00F272E2E2700F96B5F /* RecipeTabView.swift */,
 				78E62ADA273DDA4A00C853C8 /* RecipeHighlights.swift */,
 				785A91752739A60000A934F6 /* RecipeFeaturedView.swift */,
 				78A14166273B14F90040038B /* Demo */,

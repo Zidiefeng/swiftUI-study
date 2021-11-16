@@ -9,17 +9,18 @@ import SwiftUI
 
 struct BookDetailView: View {
     var book: Book
-    
     @State var selectedRating = 3
-    @State var selectedFavorite = false
+    @State var isFavourite = false
     var body: some View {
-        NavigationView {
+        
+//        NavigationView {
             GeometryReader { geo in
                 VStack(alignment: .center){
+                    Spacer()
                     
                     //MARK: header
-                    Text(book.title)
-                        .font(.headline)
+//                    Text(book.title)
+//                        .font(.headline)
                     Text("Read Now!")
                     
                     // MARK: book cover
@@ -33,16 +34,26 @@ struct BookDetailView: View {
                                 .frame(width: geo.size.width*0.6)
                         }
 
-                    
+                    Spacer()
                     // MARK: mark for later
                     Text("Mark for later !")
                     Button {
-                        selectedFavorite = !selectedFavorite
+                        isFavourite = !isFavourite
                     } label: {
-                        selectedFavorite ? Image(systemName: "star.fill") : Image(systemName: "star")
+                        isFavourite ? Image(systemName: "star.fill")
+                            .foregroundColor(.yellow) : Image(systemName: "star")
+                            .foregroundColor(.yellow)
                         
                     }
-
+                    .onChange(of: isFavourite, perform: { newValue in
+                        book.isFavourite = newValue
+                        print(book.isFavourite)
+                    })
+                    .onAppear {
+                        isFavourite = book.isFavourite
+                    }
+                    
+                    Spacer()
 
                     // MARK: rating
                     Text("Rate Amazing Words")
@@ -55,12 +66,20 @@ struct BookDetailView: View {
                     }
                     .pickerStyle(.segmented)
                     .padding()
+                    .onAppear {
+                        selectedRating = book.rating
+                    }
+                    .onChange(of: selectedRating) { newRating in
+                        book.rating = newRating
+                    }
                     
+                    Spacer()
                 }
             }
+            .navigationBarTitle("\(book.title)")
         }
 
-    }
+//    }
 }
 
 struct BookDetailView_Previews: PreviewProvider {
