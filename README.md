@@ -10,7 +10,7 @@ iOS Foundations (SwiftUI)
 
 ### Module 1: The War Card Game
 
-M1 notes [link](https://github.com/Zidiefeng/swiftUI-study/blob/main/Notes-Module%201.md)
+M1 [notes link](https://github.com/Zidiefeng/swiftUI-study/blob/main/Notes-Module%201.md)
 
 - [x] Lesson 1: The Apple Developer Ecosystem
 - [x] Lesson 2: Introduction to Xcode
@@ -27,7 +27,7 @@ M1 notes [link](https://github.com/Zidiefeng/swiftUI-study/blob/main/Notes-Modul
 
 ### Module 2: The Recipe List App
 
-M2 notes [link](https://github.com/Zidiefeng/swiftUI-study/blob/main/Notes-Module%202.md)
+M2 [notes link](https://github.com/Zidiefeng/swiftUI-study/blob/main/Notes-Module%202.md)
 
 
 - [x] Lesson 1: What You’ll Learn
@@ -48,7 +48,7 @@ M2 notes [link](https://github.com/Zidiefeng/swiftUI-study/blob/main/Notes-Modul
 
 ### Module 3: Git and GitHub
 
-M3 notes [link](https://github.com/Zidiefeng/swiftUI-study/blob/main/Add_git_to_Xcode.pdf)
+M3 [notes link](https://github.com/Zidiefeng/swiftUI-study/blob/main/Add_git_to_Xcode.pdf)
 
 - [x] Lesson 1: Introduction to Git and GitHub
 - [x] Lesson 2: GitHub and Xcode
@@ -56,7 +56,7 @@ M3 notes [link](https://github.com/Zidiefeng/swiftUI-study/blob/main/Add_git_to_
 
 ### Module 4: Recipe App
 
-M4 notes [Link](https://github.com/Zidiefeng/swiftUI-study/blob/main/Notes-Module%204.md)
+M4 [notes link](https://github.com/Zidiefeng/swiftUI-study/blob/main/Notes-Module%204.md)
 
 - [x] Lesson 1: Introduction
 - [x] Lesson 2: Adding the Project to GitHub
