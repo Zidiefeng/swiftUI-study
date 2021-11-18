@@ -2,12 +2,6 @@
 
 This repo recorded my learning progress of swiftUI, including the notes and code.
 
-
-
-### Table of Contents
-
-iOS Foundations (SwiftUI)
-
 - M1 - The War Card Game [notes link](https://github.com/Zidiefeng/swiftUI-study/blob/main/Notes-Module%201.md)
 - M2 - The Recipe List App [notes link](https://github.com/Zidiefeng/swiftUI-study/blob/main/Notes-Module%202.md)
 - M3 - Git in Xcode [notes link](https://github.com/Zidiefeng/swiftUI-study/blob/main/Add_git_to_Xcode.pdf)
