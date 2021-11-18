@@ -1,10 +1,5 @@
 # SwiftUI-CWC-M4
 
-Created: October 30, 2021 5:29 PM
-修改时间: November 17, 2021 11:46 PM
-完成: No
-来源: CWC
-
 ### TabView
 
 - code
@@ -1400,4 +1395,4 @@ item.name.lowercased()
 ### Homework Challenge
 
 - My answer: [https://github.com/Zidiefeng/swiftUI-study/tree/main/m4-book-challenge/m4-book-challenge](https://github.com/Zidiefeng/swiftUI-study/tree/main/m4-book-challenge/m4-book-challenge)
-- Solution
+- Solution： https://github.com/Zidiefeng/swiftUI-study/tree/main/m4-challenge

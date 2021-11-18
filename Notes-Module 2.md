@@ -1,10 +1,5 @@
 # SwiftUI-CWC-M2
 
-Created: October 16, 2021 7:15 PM
-修改时间: November 4, 2021 10:39 PM
-完成: No
-来源: CWC
-
 ### Array
 
 - Swift has three collection types: Arrays, Dictionaries and Sets.
