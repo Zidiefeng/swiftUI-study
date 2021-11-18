@@ -1,10 +1,5 @@
 # SwiftUI-CWC-M1
 
-Created: October 14, 2021 2:04 PM
-修改时间: October 30, 2021 5:28 PM
-完成: No
-来源: CWC
-
 [https://www.youtube.com/watch?v=F2ojC6TNwws](https://www.youtube.com/watch?v=F2ojC6TNwws)
 
 [2021 SwiftUI Tutorial for Beginners (3.5 hour Masterclass)](https://www.youtube.com/watch?v=F2ojC6TNwws)
