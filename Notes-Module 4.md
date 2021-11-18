@@ -1,10 +1,5 @@
 # SwiftUI-CWC-M4
 
-Created: October 30, 2021 5:29 PM
-修改时间: November 17, 2021 11:46 PM
-完成: No
-来源: CWC
-
 ### TabView
 
 - code
