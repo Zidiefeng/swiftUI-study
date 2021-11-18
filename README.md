@@ -8,9 +8,13 @@ This repo recorded my learning progress of swiftUI, including the notes and code
 
 iOS Foundations (SwiftUI)
 
-### Module 1: The War Card Game
+- M1 - The War Card Game [notes link](https://github.com/Zidiefeng/swiftUI-study/blob/main/Notes-Module%201.md)
+- M2 - The Recipe List App [notes link](https://github.com/Zidiefeng/swiftUI-study/blob/main/Notes-Module%202.md)
+- M3 - Git in Xcode [notes link](https://github.com/Zidiefeng/swiftUI-study/blob/main/Add_git_to_Xcode.pdf)
+- M4 - Recipe App [notes link](https://github.com/Zidiefeng/swiftUI-study/blob/main/Notes-Module%204.md)
 
-M1 [notes link](https://github.com/Zidiefeng/swiftUI-study/blob/main/Notes-Module%201.md)
+
+### Module 1: The War Card Game
 
 - [x] Lesson 1: The Apple Developer Ecosystem
 - [x] Lesson 2: Introduction to Xcode
@@ -26,9 +30,6 @@ M1 [notes link](https://github.com/Zidiefeng/swiftUI-study/blob/main/Notes-Modul
 - [x] Lesson 12: Swift If Statements
 
 ### Module 2: The Recipe List App
-
-M2 [notes link](https://github.com/Zidiefeng/swiftUI-study/blob/main/Notes-Module%202.md)
-
 
 - [x] Lesson 1: What You’ll Learn
 - [x] Lesson 2: Swift Arrays
@@ -48,15 +49,11 @@ M2 [notes link](https://github.com/Zidiefeng/swiftUI-study/blob/main/Notes-Modul
 
 ### Module 3: Git and GitHub
 
-M3 [notes link](https://github.com/Zidiefeng/swiftUI-study/blob/main/Add_git_to_Xcode.pdf)
-
 - [x] Lesson 1: Introduction to Git and GitHub
 - [x] Lesson 2: GitHub and Xcode
 - [x] Lesson 3: Working with GitHub
 
 ### Module 4: Recipe App
-
-M4 [notes link](https://github.com/Zidiefeng/swiftUI-study/blob/main/Notes-Module%204.md)
 
 - [x] Lesson 1: Introduction
 - [x] Lesson 2: Adding the Project to GitHub
