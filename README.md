@@ -66,9 +66,9 @@ This repo recorded my learning progress of swiftUI, including the notes and code
 
 ### Module 5: Learning App
 
-- [ ] Lesson 1: Introduction
-- [ ] Lesson 2: Project Setup
-- [ ] Lesson 3: Parsing the JSON Data
+- [x] Lesson 1: Introduction
+- [x] Lesson 2: Project Setup
+- [x] Lesson 3: Parsing the JSON Data
 - [ ] Lesson 4: Building the HomeView
 - [ ] Lesson 5: Building the Lesson List View
 - [ ] Lesson 6: Lesson Detail View
