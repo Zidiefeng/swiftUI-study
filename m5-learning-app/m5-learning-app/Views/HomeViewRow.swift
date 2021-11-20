@@ -43,10 +43,13 @@ struct HomeViewRow: View {
                         .bold()
                     
                     // Description
-                    //Text(module.content.description)
+                    //Text(.content.description)module
                     Text(description)
                         .padding(.bottom,20)
                         .font(Font.system(size: 10))
+                        
+                    
+                        
                     
                     // Icons
                     HStack{
