@@ -15,6 +15,7 @@
 		786BE30E27464FF800DE6282 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 786BE30D27464FF800DE6282 /* Assets.xcassets */; };
 		786BE31127464FF800DE6282 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 786BE31027464FF800DE6282 /* Preview Assets.xcassets */; };
 		786BE31D274652F500DE6282 /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786BE31C274652F500DE6282 /* ContentModel.swift */; };
+		78B944462748F8D500439685 /* HomeViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B944452748F8D500439685 /* HomeViewRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		786BE30D27464FF800DE6282 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		786BE31027464FF800DE6282 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		786BE31C274652F500DE6282 /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
+		78B944452748F8D500439685 /* HomeViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				786BE30B27464FF600DE6282 /* HomeView.swift */,
+				78B944452748F8D500439685 /* HomeViewRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				786BE30C27464FF600DE6282 /* HomeView.swift in Sources */,
+				78B944462748F8D500439685 /* HomeViewRow.swift in Sources */,
 				786BE30A27464FF600DE6282 /* learningApp.swift in Sources */,
 				786BE31D274652F500DE6282 /* ContentModel.swift in Sources */,
 				7808C3E42746D676006016B9 /* Models.swift in Sources */,
