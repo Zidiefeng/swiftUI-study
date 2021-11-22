@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import AVFoundation
 
 class ContentModel: ObservableObject {
     
@@ -20,8 +21,15 @@ class ContentModel: ObservableObject {
     @Published var currentLesson: Lesson?
     var currentLessonIndex = 0
     
+    // Current lesson explanation
+    @Published var lessonDescription = NSAttributedString()
+    
     
     var styleData : Data?
+    
+    
+    // Current selected content and test
+    @Published var currentContentSelected: Int?
     
     init() {
         self.getLocalData()
@@ -98,6 +106,9 @@ class ContentModel: ObservableObject {
         
         // set the current lesson
         currentLesson = currentModule!.content.lessons[currentLessonIndex]
+        
+        // set current lesson description
+        lessonDescription = addStyling(currentLesson!.explanation)
     }
     
     // MARK: check if there is next lesson
@@ -123,12 +134,51 @@ class ContentModel: ObservableObject {
             
             // set the current lesson property
             currentLesson = currentModule!.content.lessons[currentLessonIndex]
+            
+            // update lesson descsription
+            lessonDescription = addStyling(currentLesson!.explanation)
         }
         else{
             // reset lesson
             currentLesson = nil
             currentLessonIndex = 0
         }
+    }
+    
+    
+    // this is private because this function is for internal use only
+    private func addStyling(_ htmlString: String) -> NSAttributedString {
+        
+        var resultString = NSAttributedString()
+        var data = Data()
+        
+        // add the styling data
+        if styleData != nil{
+            data.append(contentsOf: self.styleData!)
+        }
+        
+        // add the html data
+        data.append(contentsOf: Data(htmlString.utf8))
+        
+        // convert to attributed string
+        // ---------method 1: can respond to error
+//        do {
+//            let attributedString = try NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil)
+//            resultString = attributedString
+//        }
+//        catch
+//        {
+//            print("Could not turn html into attributed string")
+//        }
+  
+        // ---------method 2: shorter but not be able to respond to errors
+        if let attributedString = try? NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil){
+            // if the condition after `try?` fails, this code will not be executed
+            resultString = attributedString
+        }
+        
+        
+        return resultString
     }
 }
 

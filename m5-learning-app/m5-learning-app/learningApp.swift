@@ -13,6 +13,8 @@ struct learningApp: App {
         WindowGroup {
             HomeView()
                 .self.environmentObject(ContentModel())
+//            HomeView1()
+//            LearnNavigationLink()
         }
     }
 }
