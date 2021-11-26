@@ -26,6 +26,7 @@
 		78D686F5274C071100E4CB35 /* LearnNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D686F4274C071100E4CB35 /* LearnNavigationLink.swift */; };
 		78D686F8274C075500E4CB35 /* LearnNavigationSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D686F7274C075500E4CB35 /* LearnNavigationSecondView.swift */; };
 		78D686FA274C174F00E4CB35 /* RectangleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D686F9274C174F00E4CB35 /* RectangleCardView.swift */; };
+		78D686FC274C1C0100E4CB35 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D686FB274C1C0100E4CB35 /* TestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		78D686F4274C071100E4CB35 /* LearnNavigationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnNavigationLink.swift; sourceTree = "<group>"; };
 		78D686F7274C075500E4CB35 /* LearnNavigationSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnNavigationSecondView.swift; sourceTree = "<group>"; };
 		78D686F9274C174F00E4CB35 /* RectangleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCardView.swift; sourceTree = "<group>"; };
+		78D686FB274C1C0100E4CB35 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +95,6 @@
 			children = (
 				786BE30927464FF600DE6282 /* learningApp.swift */,
 				786BE3172746520D00DE6282 /* Views */,
-				786BE31A2746522600DE6282 /* Models */,
 				786BE3182746521100DE6282 /* ViewModels */,
 				786BE3192746521700DE6282 /* Resources */,
 				786BE31B2746523700DE6282 /* Helpers */,
@@ -119,8 +120,10 @@
 				784AD13E274963700016ECDF /* ContentView.swift */,
 				78592BF22749770A00F4A5F5 /* ContentViewRow.swift */,
 				78592BF4274AC0D500F4A5F5 /* ContentDetailView.swift */,
+				78D686FB274C1C0100E4CB35 /* TestView.swift */,
 				78592BFF274B078900F4A5F5 /* CodeTextView.swift */,
 				78D686F9274C174F00E4CB35 /* RectangleCardView.swift */,
+				786BE31A2746522600DE6282 /* Models */,
 				78D686F6274C071600E4CB35 /* LearningOnly */,
 			);
 			path = Views;
@@ -247,6 +250,7 @@
 				78D686F8274C075500E4CB35 /* LearnNavigationSecondView.swift in Sources */,
 				78592BFC274AFF3800F4A5F5 /* LearnMapView.swift in Sources */,
 				784AD13F274963700016ECDF /* ContentView.swift in Sources */,
+				78D686FC274C1C0100E4CB35 /* TestView.swift in Sources */,
 				78D686F5274C071100E4CB35 /* LearnNavigationLink.swift in Sources */,
 				78592BF5274AC0D600F4A5F5 /* ContentDetailView.swift in Sources */,
 				786BE30A27464FF600DE6282 /* learningApp.swift in Sources */,

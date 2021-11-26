@@ -30,6 +30,12 @@ class ContentModel: ObservableObject {
     
     // Current selected content and test
     @Published var currentContentSelected: Int?
+    @Published var currentTestSelected: Int?
+    
+    
+    // Current question
+    @Published var currentQuestion: Question?
+    var currentQuestionIndex = 0
     
     init() {
         self.getLocalData()
@@ -144,6 +150,25 @@ class ContentModel: ObservableObject {
             currentLessonIndex = 0
         }
     }
+    
+    
+    
+    func beginTest(_ moduleId: Int){
+        //set the current module
+        beginModule(moduleId)
+        
+        //set the current question
+        currentQuestionIndex = 0
+        
+        // if there are questions
+        // if currentModule is nil, set to 0
+        // if there are questions, set the current question to the first one
+        if currentModule?.test.questions.count ?? 0 > 0{
+            currentQuestion = currentModule!.test.questions[currentQuestionIndex]
+        }
+    }
+    
+    
     
     
     // this is private because this function is for internal use only
