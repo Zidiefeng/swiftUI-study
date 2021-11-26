@@ -22,7 +22,7 @@ class ContentModel: ObservableObject {
     var currentLessonIndex = 0
     
     // Current lesson explanation
-    @Published var lessonDescription = NSAttributedString()
+    @Published var CodeText = NSAttributedString()
     
     
     var styleData : Data?
@@ -114,7 +114,7 @@ class ContentModel: ObservableObject {
         currentLesson = currentModule!.content.lessons[currentLessonIndex]
         
         // set current lesson description
-        lessonDescription = addStyling(currentLesson!.explanation)
+        CodeText = addStyling(currentLesson!.explanation)
     }
     
     // MARK: check if there is next lesson
@@ -142,7 +142,7 @@ class ContentModel: ObservableObject {
             currentLesson = currentModule!.content.lessons[currentLessonIndex]
             
             // update lesson descsription
-            lessonDescription = addStyling(currentLesson!.explanation)
+            CodeText = addStyling(currentLesson!.explanation)
         }
         else{
             // reset lesson
@@ -165,6 +165,7 @@ class ContentModel: ObservableObject {
         // if there are questions, set the current question to the first one
         if currentModule?.test.questions.count ?? 0 > 0{
             currentQuestion = currentModule!.test.questions[currentQuestionIndex]
+            CodeText = addStyling(currentQuestion!.content)
         }
     }
     

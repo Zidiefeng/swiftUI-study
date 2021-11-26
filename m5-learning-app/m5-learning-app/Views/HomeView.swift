@@ -39,7 +39,7 @@ struct HomeView: View {
                                 NavigationLink(tag: module.id, selection: $model.currentTestSelected) { 
                                     TestView()
                                         .onAppear {
-                                            mode.beginTest(module.id)
+                                            model.beginTest(module.id)
                                         }
                                 } label: {
                                     // Test card

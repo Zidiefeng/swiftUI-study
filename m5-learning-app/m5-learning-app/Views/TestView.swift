@@ -18,12 +18,19 @@ struct TestView: View {
                 Text("Question \(model.currentQuestionIndex + 1) of \(model.currentModule?.test.questions.count ?? 0)")
                 
                 //Question
-                //17:00
+                CodeTextView()
+                
                 //Answers
                 
                 //Button to submit
             }
             .navigationBarTitle("\(model.currentModule?.category ?? "") Test")
+            
+
+        }
+        else{
+            // test has not been loaded yet
+            ProgressView()
         }
     }
 }

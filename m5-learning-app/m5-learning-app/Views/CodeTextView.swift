@@ -24,7 +24,7 @@ struct CodeTextView: UIViewRepresentable {
         // set the attributed text for the lesson
         // since `model.lessonDescription` is a published var in ObservableObject,
         // this can be updated accordingly
-        textView.attributedText = model.lessonDescription
+        textView.attributedText = model.CodeText
         
         // scroll back to the top
         // `scrollRectToVisible`: Scrolls a specific area of the content so that it is visible in the receiver.
