@@ -27,6 +27,9 @@ struct HomeView: View {
                                 
                                 NavigationLink(tag: module.id, selection: $model.currentContentSelected){
                                     ContentView()
+                                        .onDisappear(perform: {
+                                            model.currentModule = nil
+                                        })
                                         .onAppear {
                                             model.beginModule(module.id)
                                             print(model.currentContentSelected)
@@ -55,6 +58,7 @@ struct HomeView: View {
 
 
                             }
+                            .padding(.bottom, 12)
                         }
                     }
                     .accentColor(.black)
@@ -62,6 +66,18 @@ struct HomeView: View {
                 }
             }
             .navigationTitle("Get Started")
+            .onChange(of: model.currentContentSelected) { newValue in
+                if newValue == nil {
+                    model.currentModule = nil
+                }
+            }
+            .onChange(of: model.currentTestSelected) { newValue in
+                if newValue == nil {
+                    model.currentModule = nil
+                }
+            }
+            
+            
         }
         .navigationViewStyle(.stack)
     }

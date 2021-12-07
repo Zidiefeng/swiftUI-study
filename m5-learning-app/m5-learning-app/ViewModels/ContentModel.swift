@@ -39,6 +39,7 @@ class ContentModel: ObservableObject {
     
     init() {
         self.getLocalData()
+        self.getRemoteData()
     }
     
     // MARK: data methods
@@ -80,6 +81,66 @@ class ContentModel: ObservableObject {
         
         
     }
+    
+    
+    // MARK: get remote data
+    func getRemoteData(){
+        
+        //String path
+        let urlString = "https://codewithchris.github.io/learningapp-data/data2.json" //"https://zidiefeng.github.io/swiftUI-study/data.json"
+        
+        // create a url object
+        let url = URL(string: urlString)
+        
+        // if no url, exit this data request
+        guard url != nil else{
+            return
+        }
+        
+        // create a urlRequest object
+        let request = URLRequest(url: url!)
+        
+        // get the session and kick of the task/request
+        let session = URLSession.shared
+        
+        
+        
+        // returns data task object, so save as a container
+        let dataTask = session.dataTask(with: request) { data, response, error in
+            // data:returned data
+            // response: additional info
+            
+            // check if there is an error
+            guard error == nil else {
+                // if there is an error, end this request
+                return
+            }
+            
+            do{
+                //create json decoder
+                let decoder = JSONDecoder()
+                
+                // decode
+                let modules = try decoder.decode([Module].self, from: data!)
+                
+                
+                DispatchQueue.main.async {
+                    self.modules += modules
+                }
+                
+                
+            }
+            catch{
+                print(error)
+            }
+        }
+        
+        // kick off the data task
+        dataTask.resume()
+        
+    }
+    
+    
     
     // MARK: module navigation methods
     func beginModule(_ moduleId:Int){
@@ -127,6 +188,9 @@ class ContentModel: ObservableObject {
 //        }
         
         // more direct way
+        guard currentModule != nil else{
+            return false
+        }
         return currentLessonIndex + 1 < currentModule!.content.lessons.count
     }
     
