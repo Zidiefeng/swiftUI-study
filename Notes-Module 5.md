@@ -1,9 +1,5 @@
 # SwiftUI-CWC-M5
 
-Created: November 18, 2021 12:33 AM
-修改时间: December 6, 2021 7:44 PM
-完成: No
-
 ### App Structure
 
 - This app has a more complex navigation flow
@@ -1410,8 +1406,142 @@ Fix a prior navigation bug
             
             ![Untitled](SwiftUI-CWC-M5%204748f9ead93942b28dde61254b903887/Untitled%2026.png)
             
+
+### Update text accordingly
+
+- example 1: different comments based on the score
+    
+    ```swift
+    struct TestResultView: View {
+        
+        @EnvironmentObject var model: ContentModel
+        
+        var numCorrect: Int
+        
+        var resultHeading: String {
+            
+            guard model.currentModule != nil else {
+                return ""
+            }
+            
+            let pct = Double(numCorrect)/Double(model.currentModule!.test.questions.count)
+            
+            if pct > 0.5 {
+                return "Awesome!"
+            }
+            else if pct > 0.3 {
+                return "Doing great!"
+            }
+            else
+            {
+                return "Keep learning!"
+            }
+        }
+        
+        var body: some View {
+            VStack{
+                Spacer()
+                
+                Text(resultHeading)
+                    .font(.title)
+                
+                Spacer()
+                
+                Text("You got \(numCorrect) out of \(model.currentModule?.test.questions.count ?? 0) questions")
+                
+                Spacer()
+                
+                Button {
+                    //send user to the home view
+                    model.currentTestSelected = nil
+                } label: {
+                    ZStack{
+                        RectangleCardView(color: .green)
+                            .frame(height: 48)
+                        
+                        Text("Complete")
+                            .bold()
+                            .foregroundColor(.white)
+                    }
+                }
+                
+                Spacer()
+            }
+        }
+    }
+    ```
+    
+- example 2: update button text accordingly
+    
+    ```swift
+    var buttonText: String{
+        // check if answer has been submitted
+        if submitted {
+            if model.currentQuestionIndex + 1 == model.currentModule!.test.questions.count{
+                return "Finished"
+            }
+            else {
+                // there is a next question
+                return "Next"
+            }
+        }
+        else{
+            return "Submit"
+        }
+    }
+    
+    //submit button
+    Button {
+        
+        // check if answer has been submitted
+        if submitted == true{
+            // answer has been submitted, move to the next question
+            model.nextQuestion()
+            
+            // reset properties
+            submitted = false
+            selectedAnswerIndex = nil
+        }
+        else{
+            // submit the answer
+            
+            // change submitted state to true
+            submitted = true
+            
+            if selectedAnswerIndex == model.currentQuestion?.correctIndex{
+                // check the answer and increment the counter
+                numCorrect += 1
+            }
+        }
+        
+    } label: {
+        ZStack{
+            Rectangle()
+                .foregroundColor(.green)
+                .frame(height:40)
+            
+            Text(buttonText)
+                .bold()
+                .foregroundColor(.white)
+        }
+        .padding()
+    }
+    .disabled(
+        (selectedAnswerIndex == nil)
+    )
+    ```
     
 
 ### Module 5 Lesson 16 Xcode Issue Skipped
 
 - since no error was found in the current version of Xcode, skipped this lesson
+
+### Module 5 App Structure Review
+
+- use tag and binding selection parameters in navigation link to control the selection of class and test view
+- have `published` vars in the observable object for
+    - current class
+    - current test
+- check next lesson/question: compare the index with the length of the list
+- set current class/test when creating the view
+- dynamic text
