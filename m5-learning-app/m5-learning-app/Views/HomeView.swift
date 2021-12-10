@@ -27,9 +27,9 @@ struct HomeView: View {
                                 
                                 NavigationLink(tag: module.id, selection: $model.currentContentSelected){
                                     ContentView()
-                                        .onDisappear(perform: {
-                                            model.currentModule = nil
-                                        })
+//                                        .onDisappear(perform: {
+//                                            model.currentModule = nil
+//                                        })
                                         .onAppear {
                                             model.beginModule(module.id)
                                             print(model.currentContentSelected)

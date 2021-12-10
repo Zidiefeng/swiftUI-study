@@ -98,6 +98,7 @@
 				786BE30927464FF600DE6282 /* learningApp.swift */,
 				786BE3172746520D00DE6282 /* Views */,
 				786BE3182746521100DE6282 /* ViewModels */,
+				786BE31A2746522600DE6282 /* Models */,
 				786BE3192746521700DE6282 /* Resources */,
 				786BE31B2746523700DE6282 /* Helpers */,
 				786BE30D27464FF800DE6282 /* Assets.xcassets */,
@@ -125,9 +126,8 @@
 				78D686FB274C1C0100E4CB35 /* TestView.swift */,
 				78592BFF274B078900F4A5F5 /* CodeTextView.swift */,
 				78D686F9274C174F00E4CB35 /* RectangleCardView.swift */,
-				786BE31A2746522600DE6282 /* Models */,
-				78D686F6274C071600E4CB35 /* LearningOnly */,
 				78C0AA0827534C9D00A9B78D /* TestResultView.swift */,
+				78D686F6274C071600E4CB35 /* LearningOnly */,
 			);
 			path = Views;
 			sourceTree = "<group>";
