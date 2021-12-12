@@ -19,7 +19,10 @@ struct Business: Decodable{
     var coordinates: Coordinate?
     var transactions: [String]?
     var price: String?
-    var location:
+    var location: Location?
+    var phone: String?
+    var display_phone: String?
+    var distance: Double?
 }
 
 struct Location: Decodable{
@@ -30,6 +33,7 @@ struct Location: Decodable{
     var zip_code: String?
     var country: String?
     var state: String?
+    var display_address: [String]?
 }
 
 struct Category: Decodable{
