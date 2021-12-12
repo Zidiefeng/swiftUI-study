@@ -73,20 +73,20 @@ This repo recorded my learning progress of swiftUI, including the notes and code
 - [x] Lesson 5: Building the Lesson List View
 - [x] Lesson 6: Lesson Detail View
 - [x] Lesson 7: Using UIKit Views
-- [ ] Lesson 8: A Closer Look at NavigationLink
-- [ ] Lesson 9: Quiz Display
-- [ ] Lesson 10: Quiz Answers
-- [ ] Lesson 11: Quiz Question Navigation
-- [ ] Lesson 12: Quiz Results
-- [ ] Lesson 13: GitHub Pages
-- [ ] Lesson 14: iOS Networking
-- [ ] Lesson 14 Follow Up: Updating View Code from a Background Thread
+- [x] Lesson 8: A Closer Look at NavigationLink
+- [x] Lesson 9: Quiz Display
+- [x] Lesson 10: Quiz Answers
+- [x] Lesson 11: Quiz Question Navigation
+- [x] Lesson 12: Quiz Results
+- [x] Lesson 13: GitHub Pages
+- [x] Lesson 14: iOS Networking
+- [x] Lesson 14 Follow Up: Updating View Code from a Background Thread
 
 ### Module 6: City Sights App
 
-- [ ] Lesson 1: Introduction
-- [ ] Lesson 2: App Architecture and Set Up
-- [ ] Lesson 3: CoreLocation
+- [x] Lesson 1: Introduction
+- [x] Lesson 2: App Architecture and Set Up
+- [x] Lesson 3: CoreLocation
 - [ ] Lesson 4: The Yelp API
 - [ ] Lesson 4 Follow Up: API Key Security
 - [ ] Lesson 5: Parsing the Yelp API JSON
