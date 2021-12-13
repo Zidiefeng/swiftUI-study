@@ -10,6 +10,9 @@ import CoreLocation
 
 class ContentModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
+    
+    @Published var authorizationState = CLAuthorizationStatus.notDetermined
+    
     var locationManager = CLLocationManager()
     @Published var restaurants = [Business]()
     @Published var sights = [Business]()
@@ -31,6 +34,9 @@ class ContentModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     // MARK: location manager delegate methods
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        
+        // update the authorizationState property
+        authorizationState = locationManager.authorizationStatus
         
         // current authorization status of the app
         if locationManager.authorizationStatus == CLAuthorizationStatus.authorizedAlways ||
@@ -93,11 +99,25 @@ class ContentModel: NSObject, ObservableObject, CLLocationManagerDelegate {
             let dataTask = session.dataTask(with: request) { data, response, error in
                 // check that there is not an error
                 if error == nil {
-                    // parse join
+                    // parse json
                     
                     do{
                         let decoder = JSONDecoder()
                         let result = try decoder.decode(BusinessSearch.self, from: data!)
+                        
+                        // sort businesses
+                        
+                        var businesses = result.businesses
+                        businesses = businesses.sorted { b1 , b2 in
+                            // for each two connected business, b1 and b2
+                            // if true, b1 goes first, if false, b2 goes first
+                            return b1.distance ?? 0 < b2.distance ?? 0
+                        }
+                        
+                        // call the get image function of the businesses
+                        for b in businesses{
+                            b.getImageData()
+                        }
                         
                         DispatchQueue.main.sync {
                             // assign results to the appropriate property
@@ -110,9 +130,9 @@ class ContentModel: NSObject, ObservableObject, CLLocationManagerDelegate {
                             
                             switch category {
                             case Constants.sightsKey:
-                                self.sights = result.businesses
+                                self.sights = businesses
                             case Constants.restaurantsKey:
-                                self.restaurants = result.businesses
+                                self.restaurants = businesses
                             default:
                                 break
                             }
