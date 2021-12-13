@@ -70,6 +70,11 @@ class Business: Decodable, Identifiable, ObservableObject{
         }
     }
     
+    // static function, nothing to do with particular instance
+    static func getTestData() -> Business {
+        let b = Business()
+        return b
+    }
 }
 
 struct Location: Decodable{

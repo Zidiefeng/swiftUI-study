@@ -17,7 +17,12 @@ struct BusinessSection: View {
             // otherwise, we need to add id
             // we add identifiable in Business model in this case, so we do not need to add id parameter here
             ForEach(businesses){business in
-                BusinessRow(business: business)
+                NavigationLink {
+                    BusinessDetail(business: business)
+                } label: {
+                    BusinessRow(business: business)
+                }
+
             }
         }
     }

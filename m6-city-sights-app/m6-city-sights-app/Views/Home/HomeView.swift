@@ -13,24 +13,29 @@ struct HomeView: View {
     
     var body: some View {
         if model.restaurants.count != 0 || model.sights.count != 0 {
-            // determine if we should show list of map
-            if !isMapShowing {
-                // show list
-                VStack{
-                    // header
-                    HStack{
-                        Image(systemName: "location")
-                        Text("San Francisco")
-                        Spacer()
-                        Text("Switch to map view")
+            NavigationView {
+                // determine if we should show list of map
+                if !isMapShowing {
+                    // show list
+                    VStack{
+                        // header
+                        HStack{
+                            Image(systemName: "location")
+                            Text("San Francisco")
+                            Spacer()
+                            Text("Switch to map view")
+                        }
+                        Divider()
+                        
+                        BusinessList()
                     }
-                    Divider()
-                    
-                    BusinessList()
-                }.padding([.horizontal, .top])
-            }
-            else{
-                //
+                    .padding([.horizontal, .top])
+                    // this attached to the child of navigation view instead itself
+                    .navigationBarHidden(true)
+                }
+                else{
+                    //
+                }
             }
         }
         else{
