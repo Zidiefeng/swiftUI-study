@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		781679DC277CE25A00167B4B /* BusinessTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781679DB277CE25A00167B4B /* BusinessTitle.swift */; };
+		781679DE277CE7DA00167B4B /* DIrectionsMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781679DD277CE7DA00167B4B /* DIrectionsMap.swift */; };
 		781DCCDD27670D0900779D42 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781DCCDC27670D0900779D42 /* HomeView.swift */; };
 		781DCCE32767132100779D42 /* BusinessList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781DCCE22767132100779D42 /* BusinessList.swift */; };
 		781DCCE5276715E400779D42 /* BusinessSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781DCCE4276715E400779D42 /* BusinessSectionHeader.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		781679DB277CE25A00167B4B /* BusinessTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessTitle.swift; sourceTree = "<group>"; };
+		781679DD277CE7DA00167B4B /* DIrectionsMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIrectionsMap.swift; sourceTree = "<group>"; };
 		781DCCDC27670D0900779D42 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		781DCCE22767132100779D42 /* BusinessList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessList.swift; sourceTree = "<group>"; };
 		781DCCE4276715E400779D42 /* BusinessSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSectionHeader.swift; sourceTree = "<group>"; };
@@ -73,6 +77,7 @@
 			children = (
 				781DCCEB276739A600779D42 /* BusinessDetail.swift */,
 				78C61B83277B7BA7004BBB1C /* DirectionsView.swift */,
+				781679DB277CE25A00167B4B /* BusinessTitle.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				78F68B262768086100AD5AAD /* BusinessMap.swift */,
+				781679DD277CE7DA00167B4B /* DIrectionsMap.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -255,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				781679DE277CE7DA00167B4B /* DIrectionsMap.swift in Sources */,
 				78FF9A5F2763331B00916AEC /* LaunchView.swift in Sources */,
 				781DCCE9276728B700779D42 /* BusinessRow.swift in Sources */,
 				78C61B84277B7BA7004BBB1C /* DirectionsView.swift in Sources */,
@@ -264,6 +271,7 @@
 				78FF9A5D2763331B00916AEC /* m6_city_sights_app.swift in Sources */,
 				781DCCEC276739A600779D42 /* BusinessDetail.swift in Sources */,
 				787EBAB72765E42200222144 /* BusinessSearch.swift in Sources */,
+				781679DC277CE25A00167B4B /* BusinessTitle.swift in Sources */,
 				781DCCE32767132100779D42 /* BusinessList.swift in Sources */,
 				78F68B272768086100AD5AAD /* BusinessMap.swift in Sources */,
 				781DCCE72767219600779D42 /* BusinessSection.swift in Sources */,
