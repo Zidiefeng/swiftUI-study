@@ -15,7 +15,8 @@ struct BusinessTitle: View {
         VStack(alignment: .leading){
             // business name
             Text(business.name!)
-                .font(.largeTitle)
+                .font(.title2)
+                .bold()
             
             // address
             if business.location!.displayAddress != nil {
