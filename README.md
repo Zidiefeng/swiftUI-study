@@ -6,7 +6,8 @@ This repo recorded my learning progress of swiftUI, including the notes and code
 - M2 - The Recipe List App [notes link](https://github.com/Zidiefeng/swiftUI-study/blob/main/Notes-Module%202.md)
 - M3 - Git in Xcode [notes link](https://github.com/Zidiefeng/swiftUI-study/blob/main/Add_git_to_Xcode.pdf)
 - M4 - Recipe App [notes link](https://github.com/Zidiefeng/swiftUI-study/blob/main/Notes-Module%204.md)
-
+- M5 - Learning App [notes link](https://github.com/Zidiefeng/swiftUI-study/blob/main/Notes-Module%205.md)
+- M6 - City Sights App App [notes link](https://github.com/Zidiefeng/swiftUI-study/blob/main/Notes-Module%206.md)
 
 ### Module 1: The War Card Game
 
@@ -87,15 +88,15 @@ This repo recorded my learning progress of swiftUI, including the notes and code
 - [x] Lesson 1: Introduction
 - [x] Lesson 2: App Architecture and Set Up
 - [x] Lesson 3: CoreLocation
-- [ ] Lesson 4: The Yelp API
-- [ ] Lesson 4 Follow Up: API Key Security
-- [ ] Lesson 5: Parsing the Yelp API JSON
-- [ ] Lesson 6: Building the Business List View
-- [ ] Lesson 7: Building the Business Row
-- [ ] Lesson 8: Business Detail
-- [ ] Lesson 9: Map View
-- [ ] Lesson 10: Handling Events from UIKit Controls
-- [ ] Lesson 11: Map View – Viewing the Business Detail
-- [ ] Lesson 12: Directions View
-- [ ] Lesson 13: Onboarding Sequence
-- [ ] Lesson 14: Styling
+- [x] Lesson 4: The Yelp API
+- [x] Lesson 4 Follow Up: API Key Security
+- [x] Lesson 5: Parsing the Yelp API JSON
+- [x] Lesson 6: Building the Business List View
+- [x] Lesson 7: Building the Business Row
+- [x] Lesson 8: Business Detail
+- [x] Lesson 9: Map View
+- [x] Lesson 10: Handling Events from UIKit Controls
+- [x] Lesson 11: Map View – Viewing the Business Detail
+- [x] Lesson 12: Directions View
+- [x] Lesson 13: Onboarding Sequence
+- [x] Lesson 14: Styling
