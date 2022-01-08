@@ -6,7 +6,8 @@ This repo recorded my learning progress of swiftUI, including the notes and code
 - M2 - The Recipe List App [notes link](https://github.com/Zidiefeng/swiftUI-study/blob/main/Notes-Module%202.md)
 - M3 - Git in Xcode [notes link](https://github.com/Zidiefeng/swiftUI-study/blob/main/Add_git_to_Xcode.pdf)
 - M4 - Recipe App [notes link](https://github.com/Zidiefeng/swiftUI-study/blob/main/Notes-Module%204.md)
-
+- M5 - Learning App [notes link](https://github.com/Zidiefeng/swiftUI-study/blob/main/Notes-Module%205.md)
+- M6 - City Sights App App [notes link](https://github.com/Zidiefeng/swiftUI-study/blob/main/Notes-Module%206.md)
 
 ### Module 1: The War Card Game
 
@@ -87,15 +88,85 @@ This repo recorded my learning progress of swiftUI, including the notes and code
 - [x] Lesson 1: Introduction
 - [x] Lesson 2: App Architecture and Set Up
 - [x] Lesson 3: CoreLocation
-- [ ] Lesson 4: The Yelp API
-- [ ] Lesson 4 Follow Up: API Key Security
-- [ ] Lesson 5: Parsing the Yelp API JSON
-- [ ] Lesson 6: Building the Business List View
-- [ ] Lesson 7: Building the Business Row
-- [ ] Lesson 8: Business Detail
-- [ ] Lesson 9: Map View
-- [ ] Lesson 10: Handling Events from UIKit Controls
-- [ ] Lesson 11: Map View – Viewing the Business Detail
-- [ ] Lesson 12: Directions View
-- [ ] Lesson 13: Onboarding Sequence
-- [ ] Lesson 14: Styling
+- [x] Lesson 4: The Yelp API
+- [x] Lesson 4 Follow Up: API Key Security
+- [x] Lesson 5: Parsing the Yelp API JSON
+- [x] Lesson 6: Building the Business List View
+- [x] Lesson 7: Building the Business Row
+- [x] Lesson 8: Business Detail
+- [x] Lesson 9: Map View
+- [x] Lesson 10: Handling Events from UIKit Controls
+- [x] Lesson 11: Map View – Viewing the Business Detail
+- [x] Lesson 12: Directions View
+- [x] Lesson 13: Onboarding Sequence
+- [x] Lesson 14: Styling
+
+## [CodeWithChris - iOS Databases(SwiftUI)](https://learn.codewithchris.com/courses/databases)
+
+### Introduction
+
+- [ ] Why Do We Need a Database?
+
+### Module 1: Firestore Database
+
+- [ ] Lesson 1: Introduction
+- [ ] Lesson 2: Installing CocoaPods
+- [ ] Additional Steps for Macs with an M1 Chip
+- [ ] Note About Firebase Framework Names
+- [ ] Lesson 3: Creating a New Firebase Project
+- [ ] Lesson 4: The Firestore Database
+- [ ] Lesson 5: Creating Data
+- [ ] Lesson 6: Updating Data
+- [ ] Lesson 7: Deleting Data
+- [ ] Lesson 8: Handling Errors
+- [ ] Lesson 9: Reading Data
+- [ ] Lesson 10: Listening for Data Changes
+- [ ] Lesson 11: Querying Data
+- [ ] Lesson 12: Compound Queries
+- [ ] Lesson 13: Modeling Data in Firestore
+- [ ] Module 1 Wrap Up Challenge
+
+### Module 2: The Learning App Enhanced with Firestore
+
+- [ ] Lesson 1: Introduction and Firebase Setup
+- [ ] Lesson 2: Loading the data into Firebase Database
+- [ ] Lesson 3: Retrieving the Modules
+- [ ] Lesson 4: Retrieving the Lessons and Questions
+
+### Module 3: Firebase Authentication
+
+- [ ] Lesson 1: Firebase Auth Introduction
+- [ ] Lesson 2: Firebase Drop In Auth UI
+- [ ] Lesson 3: Firebase Custom Auth UI
+- [ ] Lesson 4: Associating Data to the User
+
+### Module 4: Learning App Enhanced With Firebase Auth
+
+- [ ] Lesson 1: Introduction
+- [ ] Lesson 2: Firebase Setup
+- [ ] Lesson 3: Tracking User Data
+- [ ] Lesson 4: User Meta Data
+- [ ] Lesson 5: Tracking Usage
+- [ ] Lesson 6: Resume View
+
+### Module 5: Core Data
+
+- [ ] Lesson 1: Core Data Basics
+- [ ] Lesson 2: Core Data Setup in Xcode
+- [ ] Lesson 3: Core Data CRUD
+- [ ] Lesson 4: Sorting and Filtering with Core Data
+- [ ] Lesson 5: Core Data Entities and Relationships
+
+### Module 6: Recipe App Enhanced With Core Data
+
+- [ ] Lesson 1: Introduction
+- [ ] Lesson 2: Core Data Setup
+- [ ] Lesson 3: Preloading Data
+- [ ] Lesson 4: Featured View
+- [ ] Lesson 5: List View
+- [ ] Lesson 6: Add Recipe View and Form
+- [ ] Lesson 7: Finishing the Form
+- [ ] Lesson 8: Image Picker
+- [ ] Lesson 9: Saving to Core Data
+
+
