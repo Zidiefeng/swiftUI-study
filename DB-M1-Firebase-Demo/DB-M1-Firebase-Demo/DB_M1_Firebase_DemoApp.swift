@@ -16,7 +16,8 @@ struct DB_M1_Firebase_DemoApp: App {
         // makeReservation()
         // updateReservation()
         // readDocument()
-        dataListener()
+        // dataListener()
+        compoundQuery()
     }
     
     var body: some Scene {
@@ -47,7 +48,22 @@ struct DB_M1_Firebase_DemoApp: App {
     
     
     func compoundQuery(){
+        let db = Firestore.firestore()
+        let reservations = db.collection("reservations")
         
+        //create a composite query to the database
+        let query = reservations
+            .whereField("name", in: ["Dave","Carol"])
+            .whereField("people", isLessThan: 20)
+        
+        // execute the query
+        query.getDocuments { query, error in
+            if let query = query {
+                for doc in query.documents{
+                    print(doc.data())
+                }
+            }
+        }
     }
     
     
