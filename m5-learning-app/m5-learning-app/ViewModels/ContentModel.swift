@@ -7,8 +7,11 @@
 
 import Foundation
 import AVFoundation
-
+import Firebase
+import UIKit
 class ContentModel: ObservableObject {
+    
+    let db = Firestore.firestore()
     
     // List of modules
     @Published var modules: [Module] = [Module]()
@@ -38,32 +41,181 @@ class ContentModel: ObservableObject {
     var currentQuestionIndex = 0
     
     init() {
-        self.getLocalData()
-        self.getRemoteData()
+        //Parse local style.html
+        self.getLocalStyles()
+        
+        //get database modules
+        self.getModules()
+        
+        //self.getRemoteData()
     }
     
     // MARK: data methods
-    func getLocalData(){
-        // Get a url to the json file
-        let jsonUrl = Bundle.main.url(forResource: "data", withExtension: "json")
+    
+    func getLessons(module: Module, completion: @escaping () -> Void){
+        // specify path
+        let collection = db.collection("modules").document(module.id).collection("lessons")
         
-        do {
-            // Read the file into a data object
-            let jsonData = try Data(contentsOf: jsonUrl!)
-            
-            // Try to decode the json into an array of modules
-            let jsonDecoder = JSONDecoder()
-            //use `.self` to pass the type
-            let modules = try jsonDecoder.decode([Module].self, from: jsonData)
-            
-            //assign modules to var
-            self.modules = modules
-        }
-        catch{
-            // log error
-            print("Could not parse local data")
+        // get documents
+        collection.getDocuments { snapshot, error in
+            if error == nil && snapshot != nil {
+                // Array to track lessons
+                var lessons = [Lesson]()
+                
+                // Loop through the documents and build array of lessons
+                for doc in snapshot!.documents {
+                    
+                    // New lesson
+                    var l = Lesson()
+                    
+                    l.id = doc["id"] as? String ?? UUID().uuidString
+                    l.title = doc["title"] as? String ?? ""
+                    l.video = doc["video"] as? String ?? ""
+                    l.duration = doc["duration"] as? String ?? ""
+                    l.explanation = doc["explanation"] as? String ?? ""
+                    l.title = "asd"
+                    
+                    // Add the lesson to the array
+                    lessons.append(l)
+                }
+                
+                // loop through the published modules array and find the one that matches the id
+                for (index, m) in self.modules.enumerated(){
+                    //m is just an copy of the actual module
+                    if m.id == module.id {
+                        // set the lessons of the module
+                        self.modules[index].content.lessons = lessons
+                        
+                        // call the completion closure
+                        completion()
+                    }
+                }
+            }
         }
         
+    }
+    
+    func getQuestions(module: Module, completion: @escaping () -> Void) {
+        
+        // Specify path
+        let collection = db.collection("modules").document(module.id).collection("questions")
+        
+        // Get documents
+        collection.getDocuments { snapshot, error in
+            
+            if error == nil && snapshot != nil {
+                
+                // Array to track lessons
+                var questions = [Question]()
+                
+                // Loop through the documents and build array of lessons
+                for doc in snapshot!.documents {
+                    
+                    // New lesson
+                    var q = Question()
+                    
+                    q.id = doc["id"] as? String ?? UUID().uuidString
+                    q.content = doc["content"] as? String ?? ""
+                    q.correctIndex = doc["correctIndex"] as? Int ?? 0
+                    q.answers = doc["answers"] as? [String] ?? [String]()
+                    
+                    // Add the lesson to the array
+                    questions.append(q)
+                }
+                
+                // Setting the lessons to the module
+                // Loop through published modules array and find the one that matches the id of the copy that got passed in
+                for (index, m) in self.modules.enumerated() {
+                    
+                    // Find the module we want
+                    if m.id == module.id {
+                        
+                        // Set the lessons
+                        self.modules[index].test.questions = questions
+                        
+                        // Call the completion closure
+                        completion()
+                    }
+                }
+            }
+        }
+        
+        
+    }
+    
+    
+    func getModules(){
+        
+        // specify path
+        let collection = db.collection("modules")
+        
+        // get documents
+        collection.getDocuments { snapshot, error in
+            if error == nil && snapshot != nil{
+                
+                // create an array for the modules
+                var modules = [Module]()
+                
+                //loop through the documents returned
+                for doc in snapshot!.documents{
+                    // create a new module instance
+                    var m = Module()
+                    
+                    // parse out the values form the doc into the module instances
+                    m.id = doc["id"] as? String ?? UUID().uuidString
+                    m.category = doc["category"] as? String ?? ""
+                    
+                    // Parse the lesson content
+                    let contentMap = doc["content"] as! [String:Any]
+                    
+                    m.content.id = contentMap["id"] as? String ?? ""
+                    m.content.description = contentMap["description"] as? String ?? ""
+                    m.content.image = contentMap["image"] as? String ?? ""
+                    m.content.time = contentMap["time"] as? String ?? ""
+                    
+                    // Parse the test content
+                    let testMap = doc["test"] as! [String:Any]
+                    
+                    m.test.id = testMap["id"] as? String ?? ""
+                    m.test.description = testMap["description"] as? String ?? ""
+                    m.test.image = testMap["image"] as? String ?? ""
+                    m.test.time = testMap["time"] as? String ?? ""
+                    
+                    // add it to our array
+                    modules.append(m)
+                }
+                
+                // Assign our modules to the published property
+                DispatchQueue.main.async {
+                    self.modules = modules
+                }
+            }
+        }
+    }
+    
+    
+    func getLocalStyles(){
+        
+//        // Get a url to the json file
+//        let jsonUrl = Bundle.main.url(forResource: "data", withExtension: "json")
+//
+//        do {
+//            // Read the file into a data object
+//            let jsonData = try Data(contentsOf: jsonUrl!)
+//
+//            // Try to decode the json into an array of modules
+//            let jsonDecoder = JSONDecoder()
+//            //use `.self` to pass the type
+//            let modules = try jsonDecoder.decode([Module].self, from: jsonData)
+//
+//            //assign modules to var
+//            self.modules = modules
+//        }
+//        catch{
+//            // log error
+//            print("Could not parse local data")
+//        }
+//
         
         // parse the style data
         let styleUrl = Bundle.main.url(forResource: "style", withExtension: "html")
@@ -143,7 +295,7 @@ class ContentModel: ObservableObject {
     
     
     // MARK: module navigation methods
-    func beginModule(_ moduleId:Int){
+    func beginModule(_ moduleId:String){
         
         //Find the index for this module id
         for index in 0..<modules.count{
@@ -217,7 +369,7 @@ class ContentModel: ObservableObject {
     
     
     
-    func beginTest(_ moduleId: Int){
+    func beginTest(_ moduleId: String){
         //set the current module
         beginModule(moduleId)
         

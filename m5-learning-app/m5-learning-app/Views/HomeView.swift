@@ -25,24 +25,27 @@ struct HomeView: View {
                             VStack(spacing: 20){
                                 
                                 
-                                NavigationLink(tag: module.id, selection: $model.currentContentSelected){
+                                NavigationLink(tag: module.id.hash, selection: $model.currentContentSelected){
                                     ContentView()
 //                                        .onDisappear(perform: {
 //                                            model.currentModule = nil
 //                                        })
                                         .onAppear {
-                                            model.beginModule(module.id)
-                                            print(model.currentContentSelected)
+                                            model.getLessons(module: module) {
+                                                model.beginModule(module.id)
+                                            }
                                         }
                                 } label: {
                                     //Learning card
                                     HomeViewRow(image: module.content.image, title: "Learn \(module.category)", description: module.content.description, count: "\(module.content.lessons.count) Lessons", time: module.content.time)
                                 }
 
-                                NavigationLink(tag: module.id, selection: $model.currentTestSelected) { 
+                                NavigationLink(tag: module.id.hash, selection: $model.currentTestSelected) {
                                     TestView()
                                         .onAppear {
-                                            model.beginTest(module.id)
+                                            model.getQuestions(module: module, completion: {
+                                                model.beginTest(module.id)
+                                            })
                                         }
                                 } label: {
                                     // Test card
