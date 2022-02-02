@@ -1,0 +1,6 @@
+framework module Pods_m5_learning_app {
+  umbrella header "Pods-m5-learning-app-umbrella.h"
+
+  export *
+  module * { export * }
+}
