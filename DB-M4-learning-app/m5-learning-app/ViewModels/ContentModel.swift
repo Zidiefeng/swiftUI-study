@@ -63,7 +63,7 @@ class ContentModel: ObservableObject {
     
     // MARK: data methods
     
-    func saveData(){
+    func saveData(writeToDatabase: Bool = false){
         
         if let loggedInUser = Auth.auth().currentUser{
             // Save the progress data locally
@@ -75,9 +75,14 @@ class ContentModel: ObservableObject {
             // save it to the database
             let db = Firestore.firestore()
             let ref = db.collection("users").document(loggedInUser.uid)
-            ref.setData(["lastModule": user.lastModule,
-                         "lastLesson": user.lastLesson,
-                         "lastQuestion": user.lastQuestion], merge: true)
+            
+            if writeToDatabase{
+                // since nil is not type `Any`, and setData needs `Any`
+                // we specify to us NSNull() instead
+                ref.setData(["lastModule": user.lastModule ?? NSNull(),
+                             "lastLesson": user.lastLesson ?? NSNull(),
+                             "lastQuestion": user.lastQuestion ?? NSNull()], merge: true)
+            }
         }
         
 
@@ -131,7 +136,7 @@ class ContentModel: ObservableObject {
                     l.video = doc["video"] as? String ?? ""
                     l.duration = doc["duration"] as? String ?? ""
                     l.explanation = doc["explanation"] as? String ?? ""
-                    l.title = "asd"
+                    l.title = doc["title"] as? String ?? ""
                     
                     // Add the lesson to the array
                     lessons.append(l)
@@ -375,6 +380,9 @@ class ContentModel: ObservableObject {
     
     // MARK: lesson begin method
     func beginLesson(_ lessonIndex: Int){
+        //reset the question index
+        currentQuestionIndex = 0
+        
         //check that the lesson index is within range of module lessons
         if lessonIndex < currentModule!.content.lessons.count{
             currentLessonIndex = lessonIndex
@@ -433,6 +441,10 @@ class ContentModel: ObservableObject {
     
     
     func beginTest(_ moduleId: String){
+        
+        //reset the question index
+        currentLessonIndex = 0
+        
         //set the current module
         beginModule(moduleId)
         

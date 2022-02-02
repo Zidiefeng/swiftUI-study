@@ -21,6 +21,7 @@
 		786068BA27A9BFDE00855D96 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786068B927A9BFDE00855D96 /* ProfileView.swift */; };
 		786068BC27A9BFF500855D96 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786068BB27A9BFF500855D96 /* LaunchView.swift */; };
 		786068BE27A9E82E00855D96 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786068BD27A9E82E00855D96 /* UserService.swift */; };
+		786068C027AA6B6F00855D96 /* ResumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786068BF27AA6B6F00855D96 /* ResumeView.swift */; };
 		7864737727A7DFBD00F66D36 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7864737627A7DFBD00F66D36 /* GoogleService-Info.plist */; };
 		786BE30A27464FF600DE6282 /* learningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786BE30927464FF600DE6282 /* learningApp.swift */; };
 		786BE30C27464FF600DE6282 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786BE30B27464FF600DE6282 /* HomeView.swift */; };
@@ -53,6 +54,7 @@
 		786068B927A9BFDE00855D96 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		786068BB27A9BFF500855D96 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		786068BD27A9E82E00855D96 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		786068BF27AA6B6F00855D96 /* ResumeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeView.swift; sourceTree = "<group>"; };
 		7864737627A7DFBD00F66D36 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		786BE30627464FF600DE6282 /* m5-learning-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "m5-learning-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		786BE30927464FF600DE6282 /* learningApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = learningApp.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			children = (
 				786BE30B27464FF600DE6282 /* HomeView.swift */,
 				78B944452748F8D500439685 /* HomeViewRow.swift */,
+				786068BF27AA6B6F00855D96 /* ResumeView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				786068BA27A9BFDE00855D96 /* ProfileView.swift in Sources */,
 				786068B827A9BFC300855D96 /* LoginView.swift in Sources */,
 				786BE30A27464FF600DE6282 /* learningApp.swift in Sources */,
+				786068C027AA6B6F00855D96 /* ResumeView.swift in Sources */,
 				78592BF32749770A00F4A5F5 /* ContentViewRow.swift in Sources */,
 				786BE31D274652F500DE6282 /* ContentModel.swift in Sources */,
 				786068BE27A9E82E00855D96 /* UserService.swift in Sources */,

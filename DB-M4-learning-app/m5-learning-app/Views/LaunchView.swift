@@ -40,6 +40,11 @@ struct LaunchView: View {
             .onAppear {
                 model.getModules()
             }
+            // move from foreground to backgroun
+            .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) {_ in
+                // save progress to the database when the app ismoving from active to background
+                model.saveData(writeToDatabase: true)
+            }
         }
     }
 }
