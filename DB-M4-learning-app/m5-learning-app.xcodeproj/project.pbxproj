@@ -194,13 +194,13 @@
 		786BE3172746520D00DE6282 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				786068BB27A9BFF500855D96 /* LaunchView.swift */,
 				786068B627A9BC0B00855D96 /* Common */,
 				786068B527A9BBFE00855D96 /* Lesson */,
 				786068B427A9BBF600855D96 /* Home */,
 				786068B327A9BBF000855D96 /* Test */,
 				786068B227A9BBE700855D96 /* Account */,
 				78D686F6274C071600E4CB35 /* LearningOnly */,
-				786068BB27A9BFF500855D96 /* LaunchView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

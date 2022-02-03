@@ -7,17 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		786068D727AB822A00855D96 /* Family+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786068D327AB822A00855D96 /* Family+CoreDataClass.swift */; };
+		786068D827AB822A00855D96 /* Family+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786068D427AB822A00855D96 /* Family+CoreDataProperties.swift */; };
+		786068D927AB822A00855D96 /* People+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786068D527AB822A00855D96 /* People+CoreDataClass.swift */; };
+		786068DA27AB822A00855D96 /* People+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786068D627AB822A00855D96 /* People+CoreDataProperties.swift */; };
 		789F7FE3279167220033287A /* SwiftUI_DB_M5_Core_Data_DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789F7FE2279167220033287A /* SwiftUI_DB_M5_Core_Data_DemoApp.swift */; };
 		789F7FE5279167220033287A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789F7FE4279167220033287A /* ContentView.swift */; };
 		789F7FE7279167240033287A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 789F7FE6279167240033287A /* Assets.xcassets */; };
 		789F7FEA279167240033287A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 789F7FE9279167240033287A /* Preview Assets.xcassets */; };
 		789F7FEC279167240033287A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789F7FEB279167240033287A /* Persistence.swift */; };
 		789F7FEF279167240033287A /* SwiftUI_DB_M5_Core_Data_Demo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 789F7FED279167240033287A /* SwiftUI_DB_M5_Core_Data_Demo.xcdatamodeld */; };
-		789F7FF72791694E0033287A /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789F7FF52791694E0033287A /* Person+CoreDataClass.swift */; };
-		789F7FF82791694E0033287A /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789F7FF62791694E0033287A /* Person+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		786068D327AB822A00855D96 /* Family+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Family+CoreDataClass.swift"; sourceTree = "<group>"; };
+		786068D427AB822A00855D96 /* Family+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Family+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		786068D527AB822A00855D96 /* People+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "People+CoreDataClass.swift"; sourceTree = "<group>"; };
+		786068D627AB822A00855D96 /* People+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "People+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		789F7FDF279167220033287A /* SwiftUI-DB-M5-Core-Data-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-DB-M5-Core-Data-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		789F7FE2279167220033287A /* SwiftUI_DB_M5_Core_Data_DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_DB_M5_Core_Data_DemoApp.swift; sourceTree = "<group>"; };
 		789F7FE4279167220033287A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -25,8 +31,6 @@
 		789F7FE9279167240033287A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		789F7FEB279167240033287A /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		789F7FEE279167240033287A /* SwiftUI_DB_M5_Core_Data_Demo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftUI_DB_M5_Core_Data_Demo.xcdatamodel; sourceTree = "<group>"; };
-		789F7FF52791694E0033287A /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
-		789F7FF62791694E0033287A /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +85,10 @@
 		789F7FF9279169F50033287A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				789F7FF52791694E0033287A /* Person+CoreDataClass.swift */,
-				789F7FF62791694E0033287A /* Person+CoreDataProperties.swift */,
+				786068D327AB822A00855D96 /* Family+CoreDataClass.swift */,
+				786068D427AB822A00855D96 /* Family+CoreDataProperties.swift */,
+				786068D527AB822A00855D96 /* People+CoreDataClass.swift */,
+				786068D627AB822A00855D96 /* People+CoreDataProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -159,9 +165,11 @@
 			files = (
 				789F7FEC279167240033287A /* Persistence.swift in Sources */,
 				789F7FE5279167220033287A /* ContentView.swift in Sources */,
-				789F7FF82791694E0033287A /* Person+CoreDataProperties.swift in Sources */,
-				789F7FF72791694E0033287A /* Person+CoreDataClass.swift in Sources */,
+				786068D727AB822A00855D96 /* Family+CoreDataClass.swift in Sources */,
 				789F7FE3279167220033287A /* SwiftUI_DB_M5_Core_Data_DemoApp.swift in Sources */,
+				786068D827AB822A00855D96 /* Family+CoreDataProperties.swift in Sources */,
+				786068D927AB822A00855D96 /* People+CoreDataClass.swift in Sources */,
+				786068DA27AB822A00855D96 /* People+CoreDataProperties.swift in Sources */,
 				789F7FEF279167240033287A /* SwiftUI_DB_M5_Core_Data_Demo.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
